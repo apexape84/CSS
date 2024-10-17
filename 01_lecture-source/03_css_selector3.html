@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div-test1{background: red;}
+        #div-test1+div{background: green;}
+        #div-test3~div{background: aquamarine;}
+    </style>
+    <style>
+        /*#test :last-child{background: green;}*/
+        #test :nth-child(2n){background : skyblue;}
+        #test :nth-last-child(2n){background: yellowgreen;}
+        #test2 :first-of-type{
+            background: wheat;
+        }
+    </style>
+</head>
+<body>
+    <div id="div-test1">div-test1</div>
+    <div id="div-test2">div-test2</div>
+    <div id="div-test3">div-test3</div>
+    <div id="div-test4">div-test4</div>
+    <div id="div-test5">div-test5</div>
+    <script type="text/javascript">
+        window.onload = function(){
+            let second = document.querySelector('div[id=div-test2]');
+            console.log(typeof second);
+        }
+    </script>
+    <div id="test">
+        <p>테스트1</p>
+        <p>테스트2</p>
+        <p>테스트3</p>
+        <p>테스트4</p>
+        <p>테스트5</p>
+        <pre>테스트6</pre>
+    </div>
+    <hr>
+    <div id="test2">
+        <p>테스트1</p>
+        <p>테스트2</p>
+        <p>테스트3</p>
+        <p>테스트4</p>
+        <p>테스트5</p>
+        <pre>테스트6</pre>
+    </div>
+</body>
+</html>

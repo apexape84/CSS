@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--  내부스타일 방식 -->
+    <style> 
+        div[name=name2]{
+            background: orange;
+        }
+        div[name~=name1]{
+            background: yellow;
+        }
+        div[class|=class]{
+            background: cadetblue;
+        }
+        div[name^=name]{
+            background: blue;
+        }
+        div[class$=class]{
+            color: white;
+        }
+        div[class*=div]{
+            color: aquamarine;
+        }
+        #test1>h4{
+            background: hotpink;
+        }
+        #test2>ul>li{
+            background: chartreuse;
+        }
+        #test1 ul{
+            background: cyan;
+        }
+        #div-test1 + div{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>css selector inner properties </h1>
+    <hr>
+    <h2>default properties selector</h2>
+    <p>기본선택자 뒤에 []기호를 사용해서 속성과 속성 값을 사용 할 수 있다. 주로 id나 class속성이 아닌 것들에 적용
+        <br>
+    </p>
+    <div name="name1 name5 name6" class="div-class">div1</div>
+    <div name="name2" class="div-class">div2</div>
+    <div name="name3" class="div-class">div3</div>
+    <div name="name4" class="class-div">div4</div>
+
+    <hr>
+    <h2>후손선택자와 자손선택자</h2>
+    <p>자손 : 바로 아래요소
+        후손 : 하위요소 전부
+    </p>
+    <div id="test1">
+        <h4>자손1번</h4>
+        <h4>자손2번</h4>
+        <div id="test2">
+            <ul id="testul">리스트
+                <li>ul의 자손 div의 후손</li>
+                <li>ul의 자손 div의 후손</li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <h2>반응 선택자</h2>
+    <div id="active"></div>
+    <div id="hover"></div>
+</body>
+</html>

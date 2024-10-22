@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>head</title>
+    <style>
+        #area1 {
+            width: 100%;
+            height: 100px;
+            background-color: red;
+            text-align: center;
+        }
+        #area2 {
+            width: 100%;
+            height: 50px;
+            background-color:grey;
+            text-align: center; }
+        #area3 {
+            width: 80%;
+            height: 400px;
+            background-color: rgb(56, 251, 31);
+            float: left;
+            text-align: center;
+        }
+        #area7 {
+            display: inline;
+            width: 90%;
+            height: 110%;
+            margin: center;
+        }
+        #area6 {
+            width: 20%;
+            height: 400px;
+            background-color:blue;
+            float: right;
+            text-align: center; }
+        #area4 {
+            display: flex;
+            width: 50%;
+            height: 80%;
+            background-color:hotpink;
+            float: left;
+            text-align: center;
+            margin-top: 20px; }
+        #area5 {
+            display: flex;
+            width: 50%;
+            height: 80%;
+            background-color:orange;
+            float: right;
+            text-align: center;
+            margin-top: 20px; }
+            
+        #area8 {    
+            width: 100%;
+            height: 50px;
+            background-color: purple;
+            text-align: center;
+            }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <div id="area1"><article>첫 번째 영역</article></div>
+        <div id="area2">두 번째 영역</div>
+        <div class="float" id="area3">세 번째 영역
+            <div id="area7">
+                <div class="float" id="area4">네 번째 영역</div>
+                <div class="float" id="area5">다섯 번째 영역</div>
+            </div>
+        </div>
+        <div class="float" id="area6">여섯 번째 영역</div>        
+    </section>
+    <section>
+        <div class="wrap" id="area8">여덟 번째 영역</div>
+    </section>
+    
+</body>
+</html>
